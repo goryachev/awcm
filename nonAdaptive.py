@@ -1,25 +1,16 @@
-from abc import ABC, abstractmethod
+from math import sin
+import base
 
-class wavelet(ABC):
-    """Base class for all wavelets"""
-    @classmethod
-    @abstractmethod
-    def forward(self):
+class nonAdaptive(base.wavelet):
+    def forward(self, x):
+        print(self.functor(x))
+
+    def backward(self, x):
         pass
 
-    @classmethod
-    @abstractmethod
-    def backward(self):
-        pass
-
-
-class nonAdaptive(wavelet):
-    def forward(self):
-        pass
-
-    def backward(self):
-        pass
+def f(x: float) -> float:
+    return sin(x)
 
 if __name__ == "__main__":
-    nonAW = nonAdaptive()
-    nonAW.forward()
+    nonAW = nonAdaptive(f)
+    nonAW.forward(0.0)
