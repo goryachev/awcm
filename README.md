@@ -1,2 +1,1 @@
-# AWCM 
-## Project for Adaptive Wavelet Colocative Method realization and development. 
+# AWCM the Adaptive Wavelet Collocation Method realization and development.
